@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="185dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:background="#eee"
+    app:cardCornerRadius="5dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_name"
+            android:text="@string/name"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:padding="5dp"
+            android:background="@drawable/tv_background"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_nameContent"
+            android:text="@string/name"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintStart_toEndOf="@id/tv_name"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/tv_cardview_background"
+            android:padding="5dp"
+            android:layout_marginStart="10dp"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_noUserFound"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/no_favourite_user"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/tv_nameContent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAlignment="center"
+            android:visibility="invisible"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/tv_cardview_background"
+            android:padding="5dp"
+            android:layout_marginStart="10dp"
+
+
+            />
+
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/iv_fillStar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:visibility="visible"
+            android:background="@drawable/ic_baseline_star_24"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_email"
+            android:text="@string/email"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:padding="5dp"
+            android:background="@drawable/tv_background"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_emailContent"
+            android:text="@string/email"
+            android:textSize="17sp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/tv_email"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/tv_cardview_background"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_phoneNumber"
+            android:text="@string/phone_no"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_email"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:padding="5dp"
+            android:background="@drawable/tv_background"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_phoneContent"
+            android:text="@string/phone_no"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintStart_toEndOf="@id/tv_phoneNumber"
+            app:layout_constraintTop_toBottomOf="@id/tv_emailContent"
+            android:layout_marginTop="20dp"
+            android:padding="5dp"
+            android:background="@drawable/tv_cardview_background"
+            android:layout_marginStart="10dp"
+
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

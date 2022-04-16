@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/HomeFragment"
+    >
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.example.userslistmvvm.presentation.ui.home.HomeFragment"
+        android:label="@string/list"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/homeFragment_to_addUserFragment"
+            app:destination="@id/AddUserFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/AddUserFragment"
+        android:name="com.example.userslistmvvm.presentation.ui.adduser.AddUserFragment"
+        android:label="@string/add"
+        tools:layout="@layout/fragment_add_user">
+     <action
+            android:id="@+id/action_AddUserFragment_to_FavUserFragment"
+            app:destination="@id/FavUserFragment" />
+
+    </fragment>
+
+    <fragment android:id="@+id/FavUserFragment"
+        tools:layout="@layout/fragment_favourite_user"
+        android:name="com.example.userslistmvvm.presentation.ui.fav.FavouriteUser"
+        android:label="@string/favusers">
+    <action
+            android:id="@+id/action_FavUserFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+
+
+</navigation>
