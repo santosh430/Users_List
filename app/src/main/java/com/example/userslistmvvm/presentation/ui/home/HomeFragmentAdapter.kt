@@ -57,8 +57,8 @@ class HomeFragmentAdapter(var homeFragment: HomeFragment) :RecyclerView.Adapter<
     }
 
     private fun addFav(holder: ViewHolder, position: Int) {
-        holder.itemView.iv_hollowStarHome.isGone
-        holder.itemView.iv_fillStarHome.isVisible
+        holder.itemView.iv_hollowStarHome.isInvisible=true
+        holder.itemView.iv_fillStarHome.isVisible=true
         value=1
         homeFragment.update(list,list[position].email,value)
         notifyItemChanged(position)
@@ -66,8 +66,8 @@ class HomeFragmentAdapter(var homeFragment: HomeFragment) :RecyclerView.Adapter<
     }
 
     private fun removeFav(holder: ViewHolder, position: Int) {
-        holder.itemView.iv_hollowStarHome.isVisible
-        holder.itemView.iv_fillStarHome.isGone
+        holder.itemView.iv_hollowStarHome.isVisible=true
+        holder.itemView.iv_fillStarHome.isInvisible=true
         value=0
         homeFragment.update(list, list[position].email, value)
         notifyItemChanged(position)

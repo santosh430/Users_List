@@ -53,6 +53,8 @@ class HomeFragment : Fragment(),ItemAdapterListener {
 
         }
 
+
+
         // Inflate the layout for this fragment
         return view
     }
